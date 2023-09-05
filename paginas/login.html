@@ -28,7 +28,7 @@
 
 
         <div class="card-body">
-                <form class="login-form" method="post" action="validar_login.php">
+                <form class="login-form" method="post" id="formlogin">
                     <div class="form-group">
                       <label>Usuario: </label>
                       <input type="text" class="form-control" name="Nusu" placeholder="Ingrese su usuario">
@@ -63,51 +63,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
-       $(document).ready(function() {
-            $("#loginForm").submit(function(e) {
-                e.preventDefault(); // Evita la recarga de la página
-                
-                var username = $("#Nusu").val();
-                var password = $("#Ncontra").val();
-                
-                // Realiza la llamada Ajax
-                $.ajax({
-                    type: "POST",
-                    url: "validar_login.php", // Cambia esto a tu archivo de procesamiento de inicio de sesión
-                    data: {
-                        username: username,
-                        password: password
-                    },
-                    success: function(response) {
-                        if (response === "success") {
-                            alert("Inicio de sesión exitoso");
-                            // Aquí podrías redirigir al usuario a una página de bienvenida
-                        } else {
-                            alert("Credenciales incorrectas");
-                        }
-                    },
-                    error: function() {
-                        alert("Error en la solicitud Ajax");
-                    }
-                });
-            });
-        });
-
-
-
-    const passwordInput = document.getElementById('contra');
-    const showPasswordCheckbox = document.getElementById('mostrarContra');
-    
-    showPasswordCheckbox.addEventListener('change', function () {
-        if (showPasswordCheckbox.checked) {
-            passwordInput.type = 'text';
-        } else {
-            passwordInput.type = 'password';
-        }
-    });
-
-    </script>
+    <script src="../adicionales/js/funciones.js"></script>
 
 
 
