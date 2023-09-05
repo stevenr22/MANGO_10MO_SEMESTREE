@@ -36,25 +36,16 @@
 
 
                     <div class="form-group">
-                            <label>Contraseña:</label>
-                            <span class="btn-show-pass">
-                                <i class="zmdi zmdi-eye"></i>
-                            </span>
-                            <input class="form-control" placeholder="Ingrese su contraseña" type="password" name="Ncontra">
-                        </div>
-
-
-
-
-
-
-
-
-
+               
+                        <label>Contraseña</label>
+                        <input name="Ncontra" placeholder="Ingrese su contraseña" type="password" class="form-control" id="contra">
+                        
+        
+                    </div>
 
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label">Recordar contraseña</label>
+                  
+                      <input type="checkbox" class="form-check-input" id="mostrarContra"> Mostrar contraseña
                     </div>
                     <div class="link">
                         <p>No posee una cuenta? <a href="../paginas/registro.html">Registrate!</a></p>
@@ -70,7 +61,6 @@
     <script src="../adicionales/plugins/jquery/jquery.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="../adicionales/js/funciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
@@ -103,6 +93,20 @@
                 });
             });
         });
+
+
+
+    const passwordInput = document.getElementById('contra');
+    const showPasswordCheckbox = document.getElementById('mostrarContra');
+    
+    showPasswordCheckbox.addEventListener('change', function () {
+        if (showPasswordCheckbox.checked) {
+            passwordInput.type = 'text';
+        } else {
+            passwordInput.type = 'password';
+        }
+    });
+
     </script>
 
 
