@@ -1,0 +1,52 @@
+
+/*DASHBOARD*/
+/* Reset de estilos y estilos generales */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px; /* Establece un ancho máximo para el contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 20px;
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilos para el contenido principal */
+.content {
+    margin: 20px 0;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media queries para diseños responsive */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        margin-bottom: 20px;
+    }
+}
